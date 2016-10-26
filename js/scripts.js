@@ -7,7 +7,7 @@ $(document).ready(function() {
     var mixSentence = [];
 
     for (var count = 0; count < sentenceSplit.length; count += 1) {
-      var mixSentence = sentenceSplit.map(function(count, letter) {
+      var mixSentence = sentenceSplit.map(function(count) {
         if (count === "a") {
           return "-";
         } else if (count === "e") {
