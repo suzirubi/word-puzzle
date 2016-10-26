@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $("form#puzzle").submit(function(event) {
 
     var userSentence = $("input#sentence").val();
@@ -24,9 +25,13 @@ $(document).ready(function() {
         }
       });
     }
-    var puzzleSentence = mixSentence.join("");
-    $("#output").text(puzzleSentence);
 
+    var puzzleSentence = mixSentence.join("");
+
+    $("#output").show();
+    $("#puzzleDisplay").text(puzzleSentence);
+    $("form#puzzle").hide();
     event.preventDefault();
   });
+
 });
